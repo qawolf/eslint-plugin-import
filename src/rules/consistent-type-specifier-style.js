@@ -84,11 +84,11 @@ module.exports = {
             // no specifiers (import type {} from '') have no specifiers to mark as inline
             node.specifiers.length === 0
             || node.specifiers.length === 1
-              // default imports are both "inline" and "top-level"
+            // default imports are both "inline" and "top-level"
             && (
               node.specifiers[0].type === 'ImportDefaultSpecifier'
-                // namespace imports are both "inline" and "top-level"
-                || node.specifiers[0].type === 'ImportNamespaceSpecifier'
+              // namespace imports are both "inline" and "top-level"
+              || node.specifiers[0].type === 'ImportNamespaceSpecifier'
             )
           ) {
             return;
